@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API Paises</title>
+	<script src="https://kit.fontawesome.com/8cac62118b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<nav class="box">
+		<div class="container flex-between movil">
+			<h1>Where in the world?</h1>
+			<button class="mode">
+				<i class="fa-regular fa-moon"></i>
+				Dark Mode
+			</button>
+		</div>
+	</nav>
+
+	<header class="container">
+		<a href="index.html" class="back">
+			<i class="fa-solid fa-arrow-left-long"></i>
+			Back
+		</a>
+	</header>
+
+	<main class="container main-details">
+	</main>
+
+	<template id="template-details">
+		<img class="main-img" alt="bandera">
+		<div class="div-1">
+			<h2>Nombre</h2>
+			<div class="details-content">
+		        <p><b>Native Name: </b>native</p>
+		        <p><b>Population: </b>12313</p>
+		        <p><b>Region: </b>continent</p>
+		        <p><b>Sub Region: </b>sub-region</p>
+		        <p><b>Capital: </b>capital</p>
+		        <p><b>Top Level Domain: </b>top-lvl-domain</p>
+		        <p><b>Currencies: </b>coin</p>
+		        <p><b>Languages: </b>languages</p>
+	    	</div>
+	    	<div class="borders">
+	    	</div>
+	    </div>
+	</template>
+
+	<script type="text/javascript" src="js/dark-mode.js"></script>
+	<script type="text/javascript" src="js/details.js"></script>
+</body>
+</html>

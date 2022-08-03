@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API Paises</title>
+	<script src="https://kit.fontawesome.com/8cac62118b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<nav class="box">
+		<div class="container flex-between movil">
+			<h1>Where in the world?</h1>
+			<button class="mode">
+				<i class="fa-regular fa-moon"></i>
+				Dark Mode
+			</button>
+		</div>
+	</nav>
+	
+	<header class="filtros container flex-between movil">
+		<form class="box" onsubmit="return false">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" name="Buscar" placeholder="Search for a country...">
+		</form>
+		<select class="box">
+			<option value="" hidden>Filter by Region</option>
+			<option value="">Todas</option>
+			<option value="Africa">Africa</option>
+			<option value="Americas">America</option>
+			<option value="Asia">Asia</option>
+			<option value="Europe">Europe</option>
+			<option value="Oceania">Oceania</option>
+		</select>
+	</header>
+
+	<main class="container grid">
+	</main>
+	
+	<template id="template-card">	
+		<article class="card box">
+			<a class="details">
+				<img class="card-img" src="https://flagcdn.com" alt="bandera">
+			</a>
+			<div class="container card-body">
+				<h2>Nombre</h2>
+				<p><b>Population: </b>56367</p>
+				<p><b>Region: </b>continent</p>
+				<p><b>Capital: </b>capital</p>
+			</div>
+		</article>
+	</template>
+
+	<script type="text/javascript" src="js/dark-mode.js"></script>
+	<script type="text/javascript" src="js/Paises.js"></script>
+	<script type="text/javascript" src="js/formulario.js"></script>
+	<script type="text/javascript" src="js/select.js"></script>
+</body>
+</html>
