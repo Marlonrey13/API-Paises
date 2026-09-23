@@ -26,12 +26,12 @@ const pintarCards = datos => {
 	datos.forEach(pais => {
 		const clon = template.cloneNode(true)
 
-		clon.querySelector('.details').setAttribute('href', `Pais.html?name=${pais.cca3}`)
-		clon.querySelector('.card-img').setAttribute('src', pais.flags.png)
-		clon.querySelector('h2').textContent = pais.name.common
+		clon.querySelector('.details').setAttribute('href', `Pais.html?name=${pais.codes.ccn3}`)
+		clon.querySelector('.card-img').setAttribute('src', pais.flag.url_png)
+		clon.querySelector('h2').textContent = pais.names.common
 		clon.querySelectorAll('p')[0].innerHTML = `<b>Population: </b>${pais.population}`
 		clon.querySelectorAll('p')[1].innerHTML = `<b>Region: </b>${pais.region}`
-		clon.querySelectorAll('p')[2].innerHTML = `<b>Capital: </b>${pais.capital}`
+		clon.querySelectorAll('p')[2].innerHTML = `<b>Capital: </b>${pais.capitals}`
 
 		fragment.appendChild(clon)
 	})
