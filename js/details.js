@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchDatos = async() => {
 	try {
 		const res = await fetch(
-  `https://api.restcountries.com/countries/v5/codes.ccn3/${param}`,
+  `https://api.restcountries.com/countries/v5/codes.alpha_3/${param}`,
   {
     headers: {
       Authorization: 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e'
@@ -39,7 +39,7 @@ const pintarDetalles = datos => {
 	})
 
 	languages.forEach(item => {
-		arrayLang.push(' '+item[1])
+		arrayLang.push(' '+item.name)
 	})
 
 	templateDetails.querySelector('img').setAttribute('src', datos[0].flag.url_svg)
