@@ -6,7 +6,7 @@ const busqueda = data => {
 		e.preventDefault()
 		const letraBusqueda = input.value.toLowerCase()
 		const buscar = data.filter(item => {
-			const nombrePais = item.name.common.toLowerCase()
+			const nombrePais = item.names.common.toLowerCase()
 			if (nombrePais.indexOf(letraBusqueda) !== -1) {
 				return item
 			}
