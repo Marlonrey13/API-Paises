@@ -16,9 +16,10 @@ const fetchDatos = async() => {
       Authorization: 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e'
     }
   })
-		const data = await res.json()
-		console.log(data)
-		pintarDetalles(data)
+		const datos = await res.json()
+		const paises = await datos.data.objects
+		console.log(paises)
+		pintarDetalles(paises)
 	} catch (error) {
 		console.log(error)
 	}
