@@ -28,18 +28,18 @@ const fetchDatos = async() => {
 const pintarDetalles = datos => {
 	const arrayNatives = Object.values(datos[0].names.native)
 	const native = arrayNatives[arrayNatives.length - 1].official
-	const currencies = Object.values(datos[0].currencies)
-	const languages = Object.values(datos[0].languages)
+	const currencies = Array.isArray(datos[0].currencies) ? datos[0].currencies : Object.values(datos[0].currencies)
+	const languages = Array.isArray(datos[0].languages) ? datos[0].languages : Object.values(datos[0].languages)
 	const arrayBorders = datos[0].borders
 	let monedas = []
 	let arrayLang = []
 
 	currencies.forEach(item => {
-		monedas.push(' '+item.name)
+		monedas.push(' '+(item.name ?? item))
 	})
 
 	languages.forEach(item => {
-		arrayLang.push(' '+item)
+		arrayLang.push(' '+(item.name ?? item))
 	})
 
 	templateDetails.querySelector('img').setAttribute('src', datos[0].flag.url_svg)
