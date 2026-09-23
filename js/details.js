@@ -29,7 +29,7 @@ const pintarDetalles = datos => {
 	const arrayNatives = Object.values(datos[0].names.native)
 	const native = arrayNatives[arrayNatives.length - 1].official
 	const currencies = Object.values(datos[0].currencies)
-	const languages = Object.entries(datos[0].languages)
+	const languages = Object.values(datos[0].languages)
 	const arrayBorders = datos[0].borders
 	let monedas = []
 	let arrayLang = []
@@ -39,7 +39,7 @@ const pintarDetalles = datos => {
 	})
 
 	languages.forEach(item => {
-		arrayLang.push(' '+item.name)
+		arrayLang.push(' '+item)
 	})
 
 	templateDetails.querySelector('img').setAttribute('src', datos[0].flag.url_svg)
