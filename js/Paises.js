@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchDatos = async () => {
 	try {
-		const res = await fetch('https://restcountries.com/v3.1/all')
+		const res = await fetch('https://api.restcountries.com/countries/v5?limit=100&offset=0',
+  { headers: { 'Authorization': 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e' } })
 		const data = await res.json()
 		console.log(data)
 		pintarCards(data)
