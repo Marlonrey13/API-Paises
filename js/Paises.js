@@ -10,11 +10,12 @@ const fetchDatos = async () => {
 	try {
 		const res = await fetch('https://api.restcountries.com/countries/v5?limit=100&offset=0',
   { headers: { 'Authorization': 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e' } })
-		const data = await res.json()
-		console.log(data)
-		pintarCards(data)
-		busqueda(data)
-		filtrado(data)
+		const datos = await res.json()
+		const paises = await datos.data.objects
+		console.log(paises)
+		pintarCards(paises)
+		busqueda(paises)
+		filtrado(paises)
 	} catch (error) {
 		console.log(error)
 	}
