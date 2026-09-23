@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchDatos = async () => {
 	try {
-		const res = await fetch('https://api.restcountries.com/countries/v5?limit=100&offset=100',
+		const res = await fetch('https://api.restcountries.com/countries/v5?limit=100&offset=9',
   { headers: { 'Authorization': 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e' } })
 		const datos = await res.json()
 		const paises = await datos.data.objects

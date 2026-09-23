@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const fetchDatos = async() => {
 	try {
 		const res = await fetch(
-  `https://api.restcountries.com/countries/v5/codes.alpha_2/${param}`,
+  `https://api.restcountries.com/countries/v5/codes.ccn3/${param}`,
   {
     headers: {
       Authorization: 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e'
