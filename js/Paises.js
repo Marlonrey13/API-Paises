@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchDatos = async () => {
 	try {
-		const res = await fetch('https://api.restcountries.com/countries/v5',
+		const res = await fetch('https://api.restcountries.com/countries/v5?limit=100&offset=100',
   { headers: { 'Authorization': 'Bearer rc_live_f9366bebb26745eba419fbb2fe39c41e' } })
 		const datos = await res.json()
 		const paises = await datos.data.objects
@@ -31,7 +31,7 @@ const pintarCards = datos => {
 		clon.querySelector('h2').textContent = pais.names.common
 		clon.querySelectorAll('p')[0].innerHTML = `<b>Population: </b>${pais.population}`
 		clon.querySelectorAll('p')[1].innerHTML = `<b>Region: </b>${pais.region}`
-		clon.querySelectorAll('p')[2].innerHTML = `<b>Capital: </b>${pais.capitals[0].name}`
+		clon.querySelectorAll('p')[2].innerHTML = `<b>Capital: </b>${pais.capitals?.[0]?.name}`
 
 		fragment.appendChild(clon)
 	})
